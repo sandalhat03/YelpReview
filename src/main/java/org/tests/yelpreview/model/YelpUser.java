@@ -7,21 +7,15 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class YelpBusiness {
-
+public class YelpUser {
+    
     private String id;
-
-    private String alias;
-
-    private String name;
-
+    
+    @JsonProperty("profile_url")
+    private String profileUrl;
+    
     @JsonProperty("image_url")
     private String imageUrl;
-
-    private String url;
-
-    private Double rating;
-
-    private YelpError error;
-
+    
+    private String name;
 }
